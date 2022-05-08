@@ -788,6 +788,4 @@ class TickerBase():
                                "the issue. Thank you for your patience.")
         data = data.text
 
-        # parse news
-        self._news = data.get("news", [])
-        return self._news
+        return data
