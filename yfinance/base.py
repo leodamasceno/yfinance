@@ -786,6 +786,8 @@ class TickerBase():
             raise RuntimeError("*** YAHOO! FINANCE IS CURRENTLY DOWN! ***\n"
                                "Our engineers are working quickly to resolve "
                                "the issue. Thank you for your patience.")
-        data = data.text
+        data = data.json()
 
-        return url
+        # parse news
+        self._news = data.get("news", [])
+        return self._news
