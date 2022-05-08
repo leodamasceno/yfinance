@@ -788,4 +788,4 @@ class TickerBase():
                                "the issue. Thank you for your patience.")
         data = data.text
 
-        return data
+        return url
